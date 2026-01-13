@@ -8,5 +8,16 @@
     <p>Songs similar to one another according to <a href="http://www.last.fm/api">last.fm</a> are linked together. Song nodes are sized based on playcounts, and colored by artist.</p>
     <p>Data from <a href="http://www.last.fm/api/show/track.getSimilar">last.fm</a>. Some songs include additional links for effect.<br>Popular songs are defined as those with playcounts above the median for all songs in network. This example is a simpler version of the <a href="http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">tutorial</a> by <a href="http://vallandingham.me/">Jim Vallandingham</a>.</p>
     <!-- Cole o conteúdo copiado logo abaixo --> 
+    <div id="observablehq-chartRace-1b38f166"></div>
+    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "chartRace") return new Inspector(document.querySelector("#observablehq-chartRace-1b38f166"));
+    });
+    </script>
+    
 </body>

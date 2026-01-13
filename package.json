@@ -1,0 +1,14 @@
+{
+  "name": "b360ec2b60639bc2",
+  "main": "b360ec2b60639bc2@80.js",
+  "version": "80.0.0",
+  "homepage": "https://observablehq.com/d/b360ec2b60639bc2",
+  "author": {
+    "name": "Visualização",
+    "url": "https://observablehq.com/@visualizacao3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
