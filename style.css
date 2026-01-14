@@ -4,14 +4,14 @@ h2 {
     text-align: center;
 }
 
-div#observablehq-chartRace-1b38f166{
+/* div#observablehq-chartRace-1b38f166{
     max-width: 100%;
     height: auto;
     background: #0b0e14;
     border-radius: 8px;
     margin: 30px;
     
-}
+} */
 
 div#observablehq-view_impacto-6a34b951{
     background: #0a0a0a;
@@ -56,3 +56,41 @@ div#observablehq-mapaDiabetes-f810304b{
     
     
 }
+
+    .grafico-texto {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 0;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .grafico-texto .grafico {
+    flex: 2;
+    padding: 9px;
+    background: #C0C0C0;
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .grafico-texto .texto {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  /* 🔽 RESPONSIVO */
+  @media (max-width: 900px) {
+    .grafico-texto {
+      flex-direction: column;   /* texto vai para baixo */
+      align-items: stretch;
+    }
+
+    .grafico-texto .texto {
+      text-align: justify;
+    }
+  }
