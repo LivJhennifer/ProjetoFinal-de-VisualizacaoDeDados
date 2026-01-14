@@ -59,6 +59,22 @@ h1 {
     }
   }
 
+  p#descricao{
+    max-width: 900px;
+    margin: 40px auto 60px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #374151;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+  }
+
 /* div#observablehq-chartRace-1b38f166{
     max-width: 100%;
     height: auto;
@@ -112,6 +128,16 @@ div#observablehq-mapaDiabetes-f810304b{
     
     
 }
+
+.mapa-centro {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    margin: 30px 0;
+  }
+
+  .mapa-centro > div {
+    max-width: 100%;
+  }
 
     .grafico-texto {
     display: flex;
