@@ -313,52 +313,48 @@ div#observablehq-mapaDiabetes-f810304b{
     }
   }*/
 
-   html, body {
+  html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* container principal */
+/* Container principal */
 .mapa-texto4 {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
-  margin: 50px 10px;
+  /* MUDANÇA: center alinha o texto verticalmente ao meio do mapa no PC */
+  align-items: center; 
+  margin: 50px auto;
   padding: 30px;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  max-width: 100%;
+  max-width: 1200px; /* Sugestão: limita a largura máxima para não espalhar demais */
   box-sizing: border-box;
 }
 
-/* mapa */
-.mapa,
+/* Mapa */
 .mapa-centro {
   flex: 2;
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-  overflow: visible; 
+  min-width: 0; /* Importante para flexbox não quebrar */
 }
 
-/* svg do observable */
+.mapa {
+  width: 100%;
+  /* MUDANÇA: Garante que se o mapa for maior que a tela, ele não quebre o layout */
+  overflow-x: auto; 
+  overflow-y: hidden;
+}
+
+/* Forçar o SVG do Observable a ser responsivo */
 .mapa svg {
-  width: 100% !important;
+  max-width: 100% !important;
   height: auto !important;
   display: block;
 }
 
-/* sliders e selects */
-.mapa input,
-.mapa select {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* texto */
+/* Texto */
 .texto4 {
   flex: 1;
   line-height: 1.7;
@@ -369,10 +365,19 @@ div#observablehq-mapaDiabetes-f810304b{
 @media (max-width: 900px) {
   .mapa-texto4 {
     flex-direction: column;
-    padding: 20px;
+    /* MUDANÇA: No mobile, voltamos o alinhamento para o início */
+    align-items: stretch; 
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .mapa-centro {
+    order: 1; /* Garante que o mapa apareça primeiro */
   }
 
   .texto4 {
+    order: 2;
     text-align: justify;
+    margin-top: 20px;
   }
 }
