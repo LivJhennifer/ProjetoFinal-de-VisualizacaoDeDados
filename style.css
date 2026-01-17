@@ -313,72 +313,66 @@ div#observablehq-mapaDiabetes-f810304b{
     }
   }*/
 
-   .mapa-texto4 {
+   html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* container principal */
+.mapa-texto4 {
   display: flex;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start;
   margin: 50px 10px;
   padding: 30px;
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
-  /* 🔒 evita estouro lateral */
   max-width: 100%;
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* mapa */
-.mapa-texto4 .mapa-centro {
+.mapa,
+.mapa-centro {
   flex: 2;
-  min-width: 0;
-  width: 100%;
-  overflow: hidden; /* 🔑 */
-}
-
-/* wrapper do mapa */
-.mapa {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
+  min-width: 0;
+
+  overflow: visible; 
 }
 
-/* SVG do Observable */
+/* svg do observable */
 .mapa svg {
   width: 100% !important;
-  max-width: 100% !important;
   height: auto !important;
   display: block;
 }
 
-/* slider / controles */
+/* sliders e selects */
 .mapa input,
 .mapa select {
   max-width: 100%;
-  width: 100%;
+  box-sizing: border-box;
 }
 
 /* texto */
-.mapa-texto4 .texto4 {
+.texto4 {
   flex: 1;
   line-height: 1.7;
   color: #374151;
 }
 
-/* 📱 RESPONSIVO */
+/* ===== MOBILE ===== */
 @media (max-width: 900px) {
   .mapa-texto4 {
     flex-direction: column;
-    padding: 16px;
-    gap: 16px;
+    padding: 20px;
   }
 
-  .mapa {
-    max-height: 420px; /* impede mapa gigante */
-  }
-
-  .mapa-texto4 .texto4 {
-    font-size: 0.95rem;
+  .texto4 {
     text-align: justify;
   }
 }
