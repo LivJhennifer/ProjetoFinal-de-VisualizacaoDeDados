@@ -168,15 +168,34 @@ div#observablehq-mapaDiabetes-f810304b{
 
   /*  RESPONSIVO */
   @media (max-width: 900px) {
-    .grafico-texto {
-      flex-direction: column;   /* texto vai para baixo */
-      align-items: stretch;
-    }
-
-    .grafico-texto .texto {
-      text-align: justify;
-    }
+  .grafico-texto {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
   }
+
+  /* gráfico */
+  .grafico-texto > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* força SVG a caber */
+  .grafico-texto svg {
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+  }
+
+  /* texto */
+  .grafico-texto .texto {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
 
   /*doenças transmissiveis*/
   .transmissiveis-texto2 {
