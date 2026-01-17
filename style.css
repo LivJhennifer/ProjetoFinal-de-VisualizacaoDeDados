@@ -313,7 +313,7 @@ div#observablehq-mapaDiabetes-f810304b{
     }
   }*/
 
-  .mapa-texto4 {
+   .mapa-texto4 {
   display: flex;
   gap: 40px;
   align-items: center;
@@ -322,12 +322,40 @@ div#observablehq-mapaDiabetes-f810304b{
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* 🔒 evita estouro lateral */
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* mapa */
 .mapa-texto4 .mapa-centro {
   flex: 2;
   min-width: 0;
+  width: 100%;
+  overflow: hidden; /* 🔑 */
+}
+
+/* wrapper do mapa */
+.mapa {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* SVG do Observable */
+.mapa svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* slider / controles */
+.mapa input,
+.mapa select {
+  max-width: 100%;
+  width: 100%;
 }
 
 /* texto */
@@ -337,14 +365,20 @@ div#observablehq-mapaDiabetes-f810304b{
   color: #374151;
 }
 
-/* responsivo */
+/* 📱 RESPONSIVO */
 @media (max-width: 900px) {
   .mapa-texto4 {
     flex-direction: column;
+    padding: 16px;
+    gap: 16px;
   }
-}
 
-.mapa svg {
-  max-width: 100%;
-  height: auto;
+  .mapa {
+    max-height: 420px; /* impede mapa gigante */
+  }
+
+  .mapa-texto4 .texto4 {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
 }
