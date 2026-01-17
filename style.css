@@ -104,21 +104,21 @@ div#observablehq-chartConst-e0fe101d{
     margin: 30px;
 }
 
-div#observablehq-chartTrend-4228900b{
+/* div#observablehq-chartTrend-4228900b{
     max-width: 100%;
     height: auto;
     background: #0b0e14;
     border-radius: 12px;
     margin: 30px;
-}
+} */
 
-div#observablehq-chartDevelopment-95dd4572{
+/* div#observablehq-chartDevelopment-95dd4572{
     max-width: 100%;
     height: auto;
     background: #0b0e14;
     border-radius: 12px;
     margin: 30px;
-}
+} */
 
 div#observablehq-mapaDiabetes-f810304b{
     font-family: sans-serif;
@@ -129,6 +129,7 @@ div#observablehq-mapaDiabetes-f810304b{
     
 }
 
+/*grafico de barras*/
 .mapa-centro {
     display: flex;
     justify-content: center; /* centraliza horizontalmente */
@@ -143,7 +144,7 @@ div#observablehq-mapaDiabetes-f810304b{
     display: flex;
     gap: 40px;
     align-items: center;
-    margin: 50px 0;
+    margin: 50px 10px;
     padding: 30px;
     background: #ffffff;
     border-radius: 16px;
@@ -165,7 +166,7 @@ div#observablehq-mapaDiabetes-f810304b{
     color: #374151;
   }
 
-  /* 🔽 RESPONSIVO */
+  /*  RESPONSIVO */
   @media (max-width: 900px) {
     .grafico-texto {
       flex-direction: column;   /* texto vai para baixo */
@@ -176,3 +177,155 @@ div#observablehq-mapaDiabetes-f810304b{
       text-align: justify;
     }
   }
+
+  /*doenças transmissiveis*/
+  .transmissiveis-texto2 {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 10px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .transmissiveis-texto2 .transmissiveis {
+    flex: 2;
+    padding: 9px;
+    background: #C0C0C0;
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .transmissiveis-texto2 .texto2 {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  /*  RESPONSIVO */
+  @media (max-width: 900px) {
+    .transmissiveis-texto2 {
+      flex-direction: column;   /* texto vai para baixo */
+      align-items: stretch;
+    }
+
+    .transmissiveis-texto2 .texto2 {
+      text-align: justify;
+    }
+  }
+
+  /*doenças cronicas*/
+
+  .cronicas-texto3 {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 10px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .cronicas-texto3 .cronicas {
+    flex: 2;
+    padding: 9px;
+    background: #C0C0C0;
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .cronicas-texto3 .texto3 {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  /* 🔽 RESPONSIVO */
+  @media (max-width: 900px) {
+    .cronicas-texto3 {
+      flex-direction: column;   /* texto vai para baixo */
+      align-items: stretch;
+    }
+
+    .cronicas-texto3 .texto3 {
+      text-align: justify;
+    }
+  }
+
+  /*mapa diabetes*/
+  /* .mapa-texto4 {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 0;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .mapa-texto4 .mapa {
+    flex: 2;
+    padding: 9px;
+    background: #C0C0C0;
+    border-radius: 12px;
+    min-width: 0;
+  }
+
+  .mapa-texto4 .texto4 {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  @media (max-width: 900px) {
+    .mapa-texto4 {
+      flex-direction: column;   
+      align-items: stretch;
+    }
+    .mapa-texto4 .texto4 {
+      text-align: justify;
+    }
+  }*/
+
+  .mapa-texto4 {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 50px 10px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* mapa */
+.mapa-texto4 .mapa-centro {
+  flex: 2;
+  min-width: 0;
+}
+
+/* texto */
+.mapa-texto4 .texto4 {
+  flex: 1;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .mapa-texto4 {
+    flex-direction: column;
+  }
+}
+
+.mapa svg {
+  max-width: 100%;
+  height: auto;
+}

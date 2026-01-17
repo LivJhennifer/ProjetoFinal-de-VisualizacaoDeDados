@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Trabalho Final</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -55,8 +57,16 @@
     </script>
 
     <h2>Gráfico de Mortalidade por Doenças Transmissiveis</h2>
-    <div id="observablehq-chartTrend-4228900b"></div>
+
+    <div class="transmissiveis-texto2">
+
+    <div class="transmissiveis" id="observablehq-chartTrend-4228900b"></div>
+
+    <div class="texto2">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur harum tempore iusto tempora reiciendis? Earum minima consequuntur ratione, cum excepturi impedit eos velit. Excepturi suscipit, soluta laudantium in repellendus natus.</p>
     <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+      </div>
+    </div>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
@@ -67,9 +77,17 @@
     });
     </script>
 
+
     <h2>Mortes por Doenças Crônicas VS Mortes Por Doenças Evitaveis</h2>
-    <div id="observablehq-chartDevelopment-95dd4572"></div>
+
+    <div class="cronicas-texto3">
+    <div class="cronicas" id="observablehq-chartDevelopment-95dd4572"></div>
+
+    <div class="texto3">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem delectus, fuga sed numquam accusamus excepturi? Porro reiciendis ullam odio, cupiditate autem corporis dolor a voluptatum libero obcaecati nam asperiores. Odio.</p>
     <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+      </div>
+    </div>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
@@ -80,21 +98,30 @@
     });
     </script>
 
-    <h2>Mapa de Evolução de Mortes por Diabetes Durante os Anos</h2>
+    <h2>Mapa de Evolução de Mortes por Doenças Específicas Durante os Anos</h2>
+
+
+    <div class="mapa-texto4">
     <div class="mapa-centro">
 
-    <div id="observablehq-mapaDiabetes-f810304b"></div>
+    <div class="mapa" id="observablehq-mapaDoencas-a177ac30"></div>
 
     </div>
+
+    <div class="texto4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptates perspiciatis provident explicabo cum voluptatem est sed rem accusantium corporis, tempore saepe eius temporibus voluptate quo eaque beatae. Repellat, architecto.</p>
+    
     <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+    </div>
+    </div>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
     import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
     new Runtime().module(define, name => {
-      if (name === "mapaDiabetes") return new Inspector(document.querySelector("#observablehq-mapaDiabetes-f810304b"));
+      if (name === "mapaDoencas") return new Inspector(document.querySelector("#observablehq-mapaDoencas-a177ac30"));
     });
     </script>
-      
+          
 </body>
