@@ -1,127 +1,76 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Trabalho Final</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Final - Mortalidade Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 </head>
 <body>
     <h1>Causas de Mortes em Todo o Mundo</h1>
-    <p id="descricao">O projeto será baseado em dados históricos de mortalidade e morbidade global, com base no conceito de DALYs (Disability Adjusted Life Years), avaliando anos de vida perdidos devido a doenças e morte prematura. Serão apresentadas visualizações comparativas ao longo do tempo, entre regiões do mundo e categorias de doenças, permitindo entender melhor padrões, tendências temporais e características epidemiológicas. Como foco inicial serão feitas  comparações da incidência de doenças transmissíveis (como Malária, Tuberculose e HIV/AIDS) versus doenças não transmissíveis (como Doença de Alzheimer e Doenças Cardiovasculares) ao longo dos anos, visualização da distribuição geográfica e temporal das taxas de mortalidade por causas específicas, como Violência Interpessoal e Afogamento e análise de como certas causas de morte evoluíram em diferentes regiões.
-</p>
+    <p id="descricao">O projeto será baseado em dados históricos de mortalidade e morbidade global, com base no conceito de DALYs (Disability Adjusted Life Years), avaliando anos de vida perdidos devido a doenças e morte prematura. Serão apresentadas visualizações comparativas ao longo do tempo, entre regiões do mundo e categorias de doenças, permitindo entender melhor padrões, tendências temporais e características epidemiológicas. Como foco inicial serão feitas  comparações da incidência de doenças transmissíveis (como Malária, Tuberculose e HIV/AIDS) versus doenças não transmissíveis (como Doença de Alzheimer e Doenças Cardiovasculares) ao longo dos anos, visualização da distribuição geográfica e temporal das taxas de mortalidade por causas específicas, como Violência Interpessoal e Afogamento e análise de como certas causas de morte evoluíram em diferentes regiões.</p>
+
     <h2>Gráfico de Barras de Corrida</h2>
-    <!-- Cole o conteúdo copiado logo abaixo --> 
-     <div class="grafico-texto">
-
-    <div class = "grafico" id="observablehq-chartRace-1b38f166"></div>
-
-    <div class="texto">
-      <p id="textoBar">Para entender as tendencias de crescimento das doencas infecciosas e nao-infecciosas ao longo dos anos</p>
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-      </div>
+    <div class="grafico-texto">
+        <div class="grafico" id="observablehq-chartRace-bf32d572"></div>
+        <div class="texto">
+            <p id="textoBar">Para entender as tendencias de crescimento das doencas infecciosas e nao-infecciosas ao longo dos anos</p>
+            <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+        </div>
     </div>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "chartRace") return new Inspector(document.querySelector("#observablehq-chartRace-1b38f166"));
-    });
-    </script>
 
-    <h2>Morte por doenças cardiovasculares com o passar dos segundos</h2>
+    <h2>Morte por doenças cardiovasculares</h2>
     <div id="observablehq-view_impacto-6a34b951"></div>
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "view_impacto") return new Inspector(document.querySelector("#observablehq-view_impacto-6a34b951"));
-    });
-    </script>
 
     <h2>Constelações</h2>
-    <div id="observablehq-chartConst-e0fe101d"></div>
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "chartConst") return new Inspector(document.querySelector("#observablehq-chartConst-e0fe101d"));
-    });
-    </script>
+    <div class="constelacao-texto">
+        <div class="constelacao" id="observablehq-chartConst-ba2d9cfe"></div>
+        <div class="texto-const">
+            <p>Esta visualização de constelação permite identificar agrupamentos e conexões entre diferentes causas de mortalidade, revelando padrões complexos de dados epidemiológicos.</p>
+            <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+        </div>
+    </div>
 
     <h2>Gráfico de Mortalidade por Doenças Transmissiveis</h2>
-
     <div class="transmissiveis-texto2">
-
-    <div class="transmissiveis" id="observablehq-chartTrend-4228900b"></div>
-
-    <div class="texto2">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur harum tempore iusto tempora reiciendis? Earum minima consequuntur ratione, cum excepturi impedit eos velit. Excepturi suscipit, soluta laudantium in repellendus natus.</p>
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-      </div>
+        <div class="transmissiveis" id="observablehq-chartTrend-6443811e"></div>
+        <div class="texto2">
+            <p>Análise das tendências temporais de doenças transmissíveis em diferentes regiões.</p>
+        </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "chartTrend") return new Inspector(document.querySelector("#observablehq-chartTrend-4228900b"));
-    });
-    </script>
-
-
-    <h2>Mortes por Doenças Crônicas VS Mortes Por Doenças Evitaveis</h2>
-
+    <h2>Mortes por Doenças Crônicas VS Evitáveis</h2>
     <div class="cronicas-texto3">
-    <div class="cronicas" id="observablehq-chartDevelopment-95dd4572"></div>
-
-    <div class="texto3">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem delectus, fuga sed numquam accusamus excepturi? Porro reiciendis ullam odio, cupiditate autem corporis dolor a voluptatum libero obcaecati nam asperiores. Odio.</p>
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-      </div>
+        <div class="cronicas" id="observablehq-chartDevelopment-95dd4572"></div>
+        <div class="texto3">
+            <p>Comparativo entre causas de morte crônicas e aquelas que poderiam ser evitadas.</p>
+        </div>
     </div>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "chartDevelopment") return new Inspector(document.querySelector("#observablehq-chartDevelopment-95dd4572"));
-    });
-    </script>
-
-    <h2>Mapa de Evolução de Mortes por Doenças Específicas Durante os Anos</h2>
-
-
+    <h2>Mapa de Evolução de Mortes</h2>
     <div class="mapa-texto4">
-    <div class="mapa-centro">
-
-    <div class="mapa" id="observablehq-mapaDoencas-a177ac30"></div>
-
+        <div class="mapa-centro">
+            <div class="mapa" id="observablehq-mapaDoencas-a177ac30"></div>
+        </div>
+        <div class="texto4">
+            <p>Distribuição geográfica da mortalidade. Use o seletor para alterar a doença e o slider para o ano.</p>
+            <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
+        </div>
     </div>
 
-    <div class="texto4">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab voluptates perspiciatis provident explicabo cum voluptatem est sed rem accusantium corporis, tempore saepe eius temporibus voluptate quo eaque beatae. Repellat, architecto.</p>
-    
-    <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
-    </div>
-    </div>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
-    new Runtime().module(define, name => {
-      if (name === "mapaDoencas") return new Inspector(document.querySelector("#observablehq-mapaDoencas-a177ac30"));
-    });
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/b360ec2b60639bc2.js?v=4";
+
+        const main = new Runtime().module(define, name => {
+            if (name === "chartRace") return new Inspector(document.querySelector("#observablehq-chartRace-bf32d572"));
+            if (name === "view_impacto") return new Inspector(document.querySelector("#observablehq-view_impacto-6a34b951"));
+            if (name === "chartConst") return new Inspector(document.querySelector("#observablehq-chartConst-ba2d9cfe"));
+            if (name === "chartTrend") return new Inspector(document.querySelector("#observablehq-chartTrend-6443811e"));
+            if (name === "chartDevelopment") return new Inspector(document.querySelector("#observablehq-chartDevelopment-95dd4572"));
+            if (name === "mapaDoencas") return new Inspector(document.querySelector("#observablehq-mapaDoencas-a177ac30"));
+        });
     </script>
-          
 </body>
+</html>

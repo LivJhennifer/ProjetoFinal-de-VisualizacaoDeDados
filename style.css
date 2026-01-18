@@ -59,14 +59,22 @@ h1 {
     }
   }
 
-  p#descricao{
-    max-width: 900px;
-    margin: 40px auto 60px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #374151;
-    text-align: justify;
-  }
+  p#descricao {
+    max-width: 850px;       
+    margin: 20px auto 50px; 
+    font-size: 1.15rem;     
+    line-height: 1.8;       
+    color: #4b5563;         
+    text-align: center;     
+    padding: 0 20px;
+    font-weight: 400;
+    font-style: italic;     
+}
+
+p#descricao::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
   @media (max-width: 768px) {
     p {
@@ -75,14 +83,7 @@ h1 {
     }
   }
 
-/* div#observablehq-chartRace-1b38f166{
-    max-width: 100%;
-    height: auto;
-    background: #0b0e14;
-    border-radius: 8px;
-    margin: 30px;
-    
-} */
+
 
 div#observablehq-view_impacto-6a34b951{
     background: #0a0a0a;
@@ -96,29 +97,84 @@ div#observablehq-view_impacto-6a34b951{
     border: 1px solid #333;
 }
 
-div#observablehq-chartConst-e0fe101d{
-    max-width: 100%;
-    height: auto;
-    background: #0b0e14;
-    border-radius: 8px;
-    margin: 30px;
+
+.constelacao-texto {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 10px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* div#observablehq-chartTrend-4228900b{
-    max-width: 100%;
-    height: auto;
-    background: #0b0e14;
-    border-radius: 12px;
-    margin: 30px;
-} */
 
-/* div#observablehq-chartDevelopment-95dd4572{
-    max-width: 100%;
-    height: auto;
-    background: #0b0e14;
+.constelacao-texto .constelacao {
+    flex: 2;
+    padding: 9px;
+    background: #C0C0C0; 
     border-radius: 12px;
-    margin: 30px;
-} */
+    min-width: 0;
+}
+
+.constelacao-texto .texto-const {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #374151;
+}
+
+.constelacao-texto svg {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+@media (max-width: 900px) {
+    .constelacao-texto {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .constelacao-texto > div {
+        width: 100%;
+    }
+
+    .constelacao-texto .texto-const {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}
+/*mapa acho*/
+.mapa-texto4 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    max-width: 95% !important; 
+}
+
+.mapa-centro {
+    flex: 3; 
+}
+
+.mapa {
+    overflow: hidden; 
+}
+
+@media (max-width: 900px) {
+    .constelacao-texto {
+        flex-direction: column; 
+        padding: 20px;
+    }
+    
+    .mapa {
+        overflow-x: auto; 
+    }
+}
+
 
 div#observablehq-mapaDiabetes-f810304b{
     font-family: sans-serif;
@@ -132,7 +188,7 @@ div#observablehq-mapaDiabetes-f810304b{
 /*grafico de barras*/
 .mapa-centro {
     display: flex;
-    justify-content: center; /* centraliza horizontalmente */
+    justify-content: center; 
     margin: 30px 0;
   }
 
@@ -166,7 +222,6 @@ div#observablehq-mapaDiabetes-f810304b{
     color: #374151;
   }
 
-  /*  RESPONSIVO */
   @media (max-width: 900px) {
   .grafico-texto {
     flex-direction: column;
@@ -175,20 +230,19 @@ div#observablehq-mapaDiabetes-f810304b{
     padding: 16px;
   }
 
-  /* gráfico */
   .grafico-texto > div {
     width: 100%;
     min-width: 0;
   }
 
-  /* força SVG a caber */
+  
   .grafico-texto svg {
     max-width: 100%;
     height: auto;
     max-height: 420px;
   }
 
-  /* texto */
+ 
   .grafico-texto .texto {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -224,10 +278,9 @@ div#observablehq-mapaDiabetes-f810304b{
     color: #374151;
   }
 
-  /*  RESPONSIVO */
   @media (max-width: 900px) {
     .transmissiveis-texto2 {
-      flex-direction: column;   /* texto vai para baixo */
+      flex-direction: column;   
       align-items: stretch;
     }
 
@@ -264,10 +317,9 @@ div#observablehq-mapaDiabetes-f810304b{
     color: #374151;
   }
 
-  /* 🔽 RESPONSIVO */
   @media (max-width: 900px) {
     .cronicas-texto3 {
-      flex-direction: column;   /* texto vai para baixo */
+      flex-direction: column;   
       align-items: stretch;
     }
 
@@ -276,108 +328,62 @@ div#observablehq-mapaDiabetes-f810304b{
     }
   }
 
-  /*mapa diabetes*/
-  /* .mapa-texto4 {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin: 50px 0;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  }
 
-  .mapa-texto4 .mapa {
-    flex: 2;
-    padding: 9px;
-    background: #C0C0C0;
-    border-radius: 12px;
-    min-width: 0;
-  }
-
-  .mapa-texto4 .texto4 {
-    flex: 1;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #374151;
-  }
-
-  @media (max-width: 900px) {
-    .mapa-texto4 {
-      flex-direction: column;   
-      align-items: stretch;
-    }
-    .mapa-texto4 .texto4 {
-      text-align: justify;
-    }
-  }*/
-
-  html, body {
+html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Container principal */
+/* Container do Mapa e Texto */
 .mapa-texto4 {
-  display: flex;
-  gap: 40px;
-  /* MUDANÇA: center alinha o texto verticalmente ao meio do mapa no PC */
-  align-items: center; 
-  margin: 50px auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 1200px; /* Sugestão: limita a largura máxima para não espalhar demais */
-  box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    align-items: center; 
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 95%; 
+    box-sizing: border-box;
 }
 
-/* Mapa */
 .mapa-centro {
-  flex: 2;
-  width: 100%;
-  min-width: 0; /* Importante para flexbox não quebrar */
+    flex: 3; 
+    width: 100%;
+    min-width: 0;
 }
 
 .mapa {
-  width: 100%;
-  /* MUDANÇA: Garante que se o mapa for maior que a tela, ele não quebre o layout */
-  overflow-x: auto; 
-  overflow-y: hidden;
+    width: 100%;
+    overflow: hidden; 
 }
 
-/* Forçar o SVG do Observable a ser responsivo */
 .mapa svg {
-  max-width: 100% !important;
-  height: auto !important;
-  display: block;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    min-width: 100%; 
 }
 
-/* Texto */
 .texto4 {
-  flex: 1;
-  line-height: 1.7;
-  color: #374151;
+    flex: 1; 
+    color: #374151;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 900px) {
-  .mapa-texto4 {
-    flex-direction: column;
-    /* MUDANÇA: No mobile, voltamos o alinhamento para o início */
-    align-items: stretch; 
-    padding: 15px;
-    margin: 20px 10px;
-  }
+    .mapa-texto4 {
+        flex-direction: column;
+        padding: 15px;
+    }
 
-  .mapa-centro {
-    order: 1; /* Garante que o mapa apareça primeiro */
-  }
+    .mapa {
+        overflow-x: auto; 
+    }
 
-  .texto4 {
-    order: 2;
-    text-align: justify;
-    margin-top: 20px;
-  }
+    .mapa svg {
+        min-width: 600px; 
+    }
 }
