@@ -348,21 +348,22 @@ html, body {
     max-width: 95%; 
     box-sizing: border-box;
 }
+
+/*intro */
 .intro-box {
-    width: 100%;
-    background: linear-gradient(135deg, #f9fafb, #eef2ff);
-    border-left: 6px solid #4f46e5;
+    background: #f9fafb;
+    border-left: 6px solid #6366f1;
     padding: 20px 24px;
-    border-radius: 14px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    max-width: none;
+    overflow: visible;
 }
 
 .intro-box p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #1f2937;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: #374151;
+    margin-bottom: 0.2em;
 }
 
 .intro-tag {
@@ -371,10 +372,15 @@ html, body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    background: #e0e7ff;
     color: #4338ca;
-    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
 }
 
+
+/*mapa*/
 .mapa-centro {
     flex: 3; 
     width: 100%;

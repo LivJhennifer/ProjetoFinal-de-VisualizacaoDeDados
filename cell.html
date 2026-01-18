@@ -11,10 +11,12 @@
     <h1>Causas de Mortes em Todo o Mundo</h1>
     <p id="descricao">O projeto será baseado em dados históricos de mortalidade e morbidade global, com base no conceito de DALYs (Disability Adjusted Life Years), avaliando anos de vida perdidos devido a doenças e morte prematura. Serão apresentadas visualizações comparativas ao longo do tempo, entre regiões do mundo e categorias de doenças, permitindo entender melhor padrões, tendências temporais e características epidemiológicas. Como foco inicial serão feitas  comparações da incidência de doenças transmissíveis (como Malária, Tuberculose e HIV/AIDS) versus doenças não transmissíveis (como Doença de Alzheimer e Doenças Cardiovasculares) ao longo dos anos, visualização da distribuição geográfica e temporal das taxas de mortalidade por causas específicas, como Violência Interpessoal e Afogamento e análise de como certas causas de morte evoluíram em diferentes regiões.</p>
 
-    <h2>Mapa de Evolução de Mortes</h2>
-    <div class="mapa-texto4">
+    <h2>Mapa de Evolução de Mortes Durante os Anos</h2>
 
-        <div class="intro-box">
+    <section class="grafico-bloco">
+
+
+    <div class="intro-box">
     <span class="intro-tag">Visão Geral</span>
     <p>
         O mapa interativo permite observar a evolução temporal da mortalidade
@@ -22,7 +24,11 @@
         padrões regionais e mudanças no tempo. A seguir, destacam-se alguns
         exemplos de causas analisadas.
     </p>
+    <p>
+      Quais países ou regiões apresentam as maiores taxas de mortalidade por causas específicas?
+    </p>
 </div>
+    <div class="mapa-texto4">
 
 
         <div class="mapa-centro">
@@ -48,22 +54,51 @@
         </div>
     </div>
 
-    <h2>Gráfico de Barras de Corrida</h2>
-    <div class="grafico-texto">
+    </section>
+
+    <h2>Evolução do Ranking de Mortalidade Global</h2>
+
+    <section class="grafico-bloco">
+
+
+      <div class="intro-box">
+    <span class="intro-tag">Visão Geral</span>
+    <p>
+        Quais são as principais causas de morte globalmente e como essa hierarquia mudou do início do período (1990) para o final (2019)?
+    </p>
+</div>
+        <div class="grafico-texto">
+
         <div class="grafico" id="observablehq-chartRace-bf32d572"></div>
         <div class="texto">
             <p>A evolução da mortalidade global desde 1990 revela um cenário de transição epidemiológica marcante e persistente. No topo da lista, as doenças cardiovasculares mantêm uma liderança inabalável, consolidando-se como a principal causa de óbitos ao longo de todas as décadas analisadas. </p>
             <p>Paralelamente, o mundo testemunhou uma clara mudança de perfil: as doenças crônicas apresentaram um crescimento expressivo em comparação às doenças transmissíveis, que registraram quedas consistentes graças aos avanços em saneamento, vacinação e tratamentos antibióticos. </p>
-            <p>Outro dado que chama a atenção são os transtornos neonatais, que demonstraram uma resiliência preocupante, ocupando o "Top 5" das causas de morte por mais de vinte anos. Foi somente em 2013 que o fortalecimento das políticas de saúde materno-infantil permitiu que essa causa finalmente recuasse um nível no ranking global, sinalizando um progresso importante, embora tardio, na proteção dos recém-nascidos.</p>
+            <p>Embora as causas externas, como acidentes e violência, recebam grande atenção pública pela sua natureza súbita e traumática, elas representam uma fração significativamente menor da mortalidade global quando comparadas aos demais grupos. Essa disparidade numérica evidencia que, apesar do impacto social imediato dos traumas, o fardo real da saúde pública e a maior parte das perdas de vidas ainda estão concentrados na gestão de doenças de longo prazo e no controle de patologias evitáveis.</p>
             <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
         </div>
     </div>
 
+    </section>
+
     <h2>Morte por doenças cardiovasculares</h2>
     <div id="observablehq-view_impacto-6a34b951"></div>
 
-    <h2>Gráfico de Mortalidade por Doenças Transmissiveis</h2>
-    <div class="transmissiveis-texto2">
+    <h2>Tendência da Mortalidade Global por Grupo de Causas</h2>
+
+    <section class="grafico-bloco">
+
+
+      <div class="intro-box">
+    <span class="intro-tag">Visão Geral</span>
+    <p>
+        Existe uma tendência clara na distribuição das mortes entre doenças transmissíveis e doenças não transmissíveis ao longo do tempo?
+    </p>
+    <p>
+      A mortalidade causada por doenças infecciosas tem diminuído com o tempo?
+    </p>
+</div>
+        <div class="transmissiveis-texto2">
+
         <div class="transmissiveis" id="observablehq-chartTrend-6443811e"></div>
         <div class="texto2">
             <p><strong>A Vitória sobre as Carências Básicas
@@ -78,9 +113,22 @@
 </p>
         </div>
     </div>
+    </section>
 
-    <h2>Constelações</h2>
-    <div class="constelacao-texto">
+
+    <h2>Conexões e Afinidades entre Causas Globais de Morte</h2>
+    <section class="grafico-bloco">
+
+
+      <div class="intro-box">
+    <span class="intro-tag">Visão Geral</span>
+    <p>
+       De que forma eventos como conflitos, desastres naturais ou pobreza impactam no perfil global de saúde?
+    </p>
+</div>
+
+        <div class="constelacao-texto">
+
         <div class="constelacao" id="observablehq-chartConst-ba2d9cfe"></div>
         <div class="texto-const">
             <p><strong>O Equilíbrio da Transição Epidemiológica</strong></p>
@@ -89,11 +137,23 @@
             <p>Credit: <a href="https://observablehq.com/d/b360ec2b60639bc2">Untitled by Visualização</a></p>
         </div>
     </div>
-
+    </section>
     
 
-    <h2>Mortes por Doenças Crônicas VS Evitáveis</h2>
-    <div class="cronicas-texto3">
+    <h2>Doenças da Modernidade vs. Doenças da Carência</h2>
+
+    <section class="grafico-bloco">
+
+
+      <div class="intro-box">
+    <span class="intro-tag">Visão Geral</span>
+    <p>
+        Como a incidência de causas de morte evitáveis, como Diarréia ou Infecções Respiratórias Inferiores, se relaciona com o código do país (potencialmente o nível de desenvolvimento)?
+    </p>
+</div>
+
+        <div class="cronicas-texto3">
+
         <div class="cronicas" id="observablehq-chartDevelopment-95dd4572"></div>
         <div class="texto3">
             <p>Em países com menor IDH, as deficiências em saneamento básico, a insegurança alimentar e o acesso limitado a cuidados primários de saúde fazem com que as doenças evitáveis sejam as grandes protagonistas, ceifando vidas precocemente, muitas vezes ainda na infância. Nesses cenários, a luta é contra agentes biológicos e a escassez de recursos básicos.
@@ -102,6 +162,8 @@
 </p>
         </div>
     </div>
+
+    </section>
 
     
 
